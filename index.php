@@ -1,5 +1,10 @@
 <?php
-require "conn.php"; // Connect to mysql
+require "includes/conn.php"; // Connect to mysql
+require "includes/functions.php"; // Existing functions
+
+$pageLocation = sanitizeData($_GET['gl']); // Which page user is on through URL get
+
+
 ?>
 
 <!DOCTYPE HTML>
@@ -17,15 +22,24 @@ require "conn.php"; // Connect to mysql
 
     <header>
         <h2>eCommerce Shop</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-    </nav>
+
+    <main>
+
+        <?php require "mainInclude.php"; // Main bulk of PHP data for populating login, logout, etc ?>
+
+    </main>
+
+
 
 
 <script src="js/custom.js"></script>
