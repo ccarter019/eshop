@@ -2,8 +2,10 @@
 require "includes/conn.php"; // Connect to mysql
 require "includes/functions.php"; // Existing functions
 
-$pageLocation = sanitizeData($_GET['gl']); // Which page user is on through URL get
-
+$pageUl = $_GET['gl'];
+if(!empty($pageUl)) {
+    $pageLocation = sanitizeData($pageUl); // Which page user is on through URL get
+}
 
 ?>
 
@@ -24,18 +26,18 @@ $pageLocation = sanitizeData($_GET['gl']); // Which page user is on through URL 
         <h2>eCommerce Shop</h2>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="/index.php">Home</a></li>
+                <li><a href="/index.php?gl=login">Login</a></li>
+                <li><a href="/index.php?gl=register">Register</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="/index.php?gl=logout">Logout</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
 
-        <?php require "mainInclude.php"; // Main bulk of PHP data for populating login, logout, etc ?>
+        <?php require "includes/mainInclude.php"; // Main bulk of PHP data for populating login, logout, etc ?>
 
     </main>
 
