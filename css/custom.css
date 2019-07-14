@@ -1,1 +1,86 @@
 /**** Ecommerce Shop Styling ****/
+
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+header,
+main {
+  width: 100%;
+  margin: 20px auto;
+}
+
+header {
+  background: #f1f1f1;
+}
+
+a {
+}
+
+.clear {
+  clear: both;
+}
+
+h2 {
+  font-size: 200%;
+  text-transform: uppercase;
+  padding: 15px;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  float: right;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  float: left;
+  padding: 10px;
+  font-weight: bold;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #ff5733;
+  text-decoration: none;
+}
+
+li.nLogout a {
+  background: #ccc;
+  padding: 4px;
+  display: block;
+}
+
+.formWrap {
+  width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+}
+
+.formWrap label {
+  width: 200px;
+  float: left;
+}
+
+.formWrap input {
+  float: left;
+  margin: 10px;
+}
+
+.formWrap h5 {
+  font-size: 120%;
+}
+
+.formWrap p {
+  font-size: 11px;
+  text-align: center;
+}

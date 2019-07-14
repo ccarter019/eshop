@@ -2,8 +2,14 @@
 require "includes/conn.php"; // Connect to mysql
 require "includes/functions.php"; // Existing functions
 
-$pageUl = $_GET['gl'];
-if(!empty($pageUl)) {
+if(isset($_GET['gl'])) {
+    $pageUl = $_GET['gl'];
+}
+
+if(empty($pageUl)) {
+    $pageLocation = "login";
+}
+else {
     $pageLocation = sanitizeData($pageUl); // Which page user is on through URL get
 }
 
@@ -30,10 +36,12 @@ if(!empty($pageUl)) {
                 <li><a href="/index.php?gl=login">Login</a></li>
                 <li><a href="/index.php?gl=register">Register</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="/index.php?gl=logout">Logout</a></li>
+                <li class="nLogout"><a href="/index.php?gl=logout">Logout</a></li>
             </ul>
         </nav>
+        <div class="clear"></div>
     </header>
+    <div class="clear"></div>
 
     <main>
 
