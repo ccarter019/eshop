@@ -84,3 +84,8 @@ li.nLogout a {
   font-size: 11px;
   text-align: center;
 }
+
+.formErrors {
+  color: #ff0000;
+  font-weight: bold;
+}

@@ -37,9 +37,9 @@ require "includes/conn.php";
         <h2>eCommerce Shop</h2>
         <nav>
             <ul>
-                <li><a href="/index.php">Home</a></li>
-                <li><a href="/index.php?gl=login">Login</a></li>
-                <li><a href="/index.php?gl=register">Register</a></li>
+                <li><a href="/eshop/index.php">Home</a></li>
+                <li><a href="/eshop/index.php?gl=login">Login</a></li>
+                <li><a href="/eshop/index.php?gl=register">Register</a></li>
                 <li><a href="#">About</a></li>
                 <li class="nLogout"><a href="/index.php?gl=logout">Logout</a></li>
             </ul>
