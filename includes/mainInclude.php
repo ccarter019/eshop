@@ -12,5 +12,9 @@ elseif($pageLocation == "register") { // register form
     require "register.php";
 
 }
+elseif($pageLocation == "logout") { // register form
+    require "logout.php";
+
+}
 
 ?>

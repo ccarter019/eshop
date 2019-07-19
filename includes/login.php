@@ -23,6 +23,7 @@ elseif(isset($_POST['pageLocLogin'])) {
         $row = mysqli_fetch_array($result);
         if(password_verify($rPassword, $row['password'])) {
             echo "<p class='formValid'>Thank you for logging in.</p>";
+            $_SESSION['userId'] = $row['username'];
         } else {
             echo "<p class='formErrors'>Invalid username or password.</p>";
             require "login_form.php";

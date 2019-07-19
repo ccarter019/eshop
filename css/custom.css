@@ -85,6 +85,17 @@ li.nLogout a {
   text-align: center;
 }
 
+.loggedUser {
+  font-size: 0.8em;
+  text-align: center;
+  width: 100%;
+}
+
+.loggedUser a {
+  display: inline-block;
+  margin: 6px;
+}
+
 .formErrors {
   color: #ff0000;
   font-weight: bold;

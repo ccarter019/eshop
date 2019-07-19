@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "includes/conn.php"; // Connect to mysql
 require "includes/functions.php"; // Existing functions
 
@@ -43,8 +44,17 @@ require "includes/conn.php";
                 <li><a href="#">About</a></li>
                 <li class="nLogout"><a href="/index.php?gl=logout">Logout</a></li>
             </ul>
+            <div class="loggedUser">
+            <?php
+                if(isset($_SESSION['userId'])) {
+                    echo "You are logged in: <strong>". $_SESSION['userId']."</strong>";
+                    echo "<a href='/eshop/index.php?gl=logout'>Logout</a>";
+                }
+            ?>
+            </div>
         </nav>
         <div class="clear"></div>
+
     </header>
     <div class="clear"></div>
 
