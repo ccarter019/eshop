@@ -7,10 +7,11 @@ function sanitizeData($var) {
     return $var;
 }
 
-function checkIss($dta) {
-    if(isset($dta)) {
-        return $dta;
-    }
+function createSalt()
+{
+    $text = md5(uniqid(rand(), TRUE));
+    return substr($text, 0, 3);
 }
+
 
 ?>

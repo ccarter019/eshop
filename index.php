@@ -2,17 +2,17 @@
 require "includes/conn.php"; // Connect to mysql
 require "includes/functions.php"; // Existing functions
 
-// checking to see if URL GET method gl variable is set to determine which page user is on
+// determine which page user is on
 // gl variable in URL determines users current location
 if(isset($_GET['gl'])) {
-    $pageUl = $_GET['gl'];
+    $pageUl = sanitizeData($_GET['gl']);
 }
 
 if(empty($pageUl)) {
     $pageLocation = "login"; // default to login page
 }
 else {
-    $pageLocation = sanitizeData($pageUl); // Which page user is on through URL get
+    $pageLocation = $pageUl; // Which page user is on through URL get
 }
 
 // connect mysql
