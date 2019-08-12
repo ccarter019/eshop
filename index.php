@@ -29,40 +29,54 @@ require "includes/conn.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sales Shop</title>
 
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+
     
 </head>
 <body>
 
     <header>
-        <h2>eCommerce Shop</h2>
-        <nav>
-            <ul>
-                <li><a href="/eshop/index.php">Home</a></li>
-                <li><a href="/eshop/index.php?gl=login">Login</a></li>
-                <li><a href="/eshop/index.php?gl=register">Register</a></li>
-                <li><a href="#">About</a></li>
-                <li class="nLogout"><a href="/index.php?gl=logout">Logout</a></li>
-            </ul>
-            <div class="loggedUser">
-            <?php
-                if(isset($_SESSION['userId'])) {
-                    echo "You are logged in: <strong>". $_SESSION['userId']."</strong>";
-                    echo "<a href='/eshop/index.php?gl=logout'>Logout</a>";
-                }
-            ?>
-            </div>
-        </nav>
+        <h2><a href="/"></a></h2>
         <div class="clear"></div>
-
     </header>
+    <nav>
+        <ul>
+            <li><a href="/eshop/index.php">Home</a></li>
+            <li><a href="/eshop/index.php?gl=login">Login</a></li>
+            <li><a href="/eshop/index.php?gl=register">Register</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
     <div class="clear"></div>
 
     <main>
-
-        <?php require "includes/mainInclude.php"; // Main bulk of PHP data for populating login, logout, etc ?>
+        <div class="mainWrap">
+            <div class="leftCol"><?php require "includes/nav.php"; ?></div>
+            <div class="rightCol">
+                <?php
+                    if(isset($_SESSION['userId'])) {
+                        echo "<div class='loggedUser'>";
+                        echo "You are logged in:<br> <strong>". $_SESSION['userId']."</strong>";                    echo "<a href='/eshop/index.php?gl=logout' class='logoutLink'>Logout</a>";
+                        echo "</div><div class='clear'></div>";
+                    }
+                    require "includes/mainInclude.php"; // Main bulk of PHP data for populating login, logout, etc
+                ?>
+            </div>
+        </div>
 
     </main>
+    <div class="clear"></div>
+
+    <footer>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+        <p>PokemonAdventure.com is an unofficial site.</p>
+    </footer>
 
 
 

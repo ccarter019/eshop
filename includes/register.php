@@ -37,6 +37,7 @@ elseif(isset($_POST['pageLocReg'])) {
             'cost' => 11,
         ];
         $hash = password_hash($rPassword, PASSWORD_BCRYPT, $options);
+        $rUsername = mysqli_real_escape_string($conn, $rUsername);
         $result = mysqli_query($conn, "INSERT INTO users VALUES (NULL, '$rUsername', '$rUsername', '$hash', '')");
         echo "<h4>Thank you for joining.</h4>";
     }
