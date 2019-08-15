@@ -20,11 +20,13 @@ footer {
 }
 
 footer {
-  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-top: 25px;
 }
 
 footer ul {
   border-top: 1px solid #83e1f8;
+  padding: 20px 0 0 0;
 }
 
 footer ul li {
@@ -125,6 +127,11 @@ li.nLogout a {
 .rightCol {
   width: 65%;
   float: left;
+  margin-top: 40px;
+}
+
+.rightCol p {
+  margin: 15px 5px;
 }
 
 .navBox {
@@ -203,12 +210,24 @@ li.nLogout a {
 
 /*** Product styling ***/
 
-.prodBox {
+.prodBox1,
+.prodBox2 {
   border: 1px solid #c8c8c8;
-  width: 23.5% !important;
+  width: 31% !important;
   margin-left: 1.5% !important;
   height: 243px;
   margin-bottom: 12px;
+  float: left;
+  display: inline-block;
+  text-align: center;
+}
+
+.prodBox1 {
+  background: url(../img/prodbg1.jpg) no-repeat;
+}
+
+.prodBox2 {
+  background: url(../img/prodbg2.jpg) no-repeat;
 }
 
 .prodBoxInner {
@@ -217,6 +236,36 @@ li.nLogout a {
   padding: 10px;
   height: 206px;
   border: 1px solid #ccc;
+}
+
+.prodBoxInner a {
+  color:#000;
+  text-decoration:none;
+}
+
+.prodImg {
+  height: 100px;
+}
+
+.prodImg img {
+  width: 100px;
+}
+
+p.titleP {
+  font-weight: bold;
+  font-size: 0.8em;
+  margin: 3px 0 12px 0;
+}
+
+p.priceP {
+  font-weight: bold;
+  font-size: 0.8em;
+  margin: 3px 0 12px 0;
+}
+
+button.addP {
+  font-size: 0.6em;
+  margin: 5px 0;
 }
 
 /*** Ellipses Loading CSS animation ***/

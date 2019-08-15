@@ -6,9 +6,9 @@ if(!empty($pageLocation)) {
 
 // Below if statements control which page user is on and populates content
 if(empty($pageLocation)) { // login defaults homepage
-    require "login.php";
+    require "shop.php";
 }
-elseif($pageLocation == "login") { // login defaults homepage
+elseif($pageLocation == "login") { // login form
     require "login.php";
 }
 elseif($pageLocation == "register") { // register form

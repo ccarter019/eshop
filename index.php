@@ -10,7 +10,7 @@ if(isset($_GET['gl'])) {
 }
 
 if(empty($pageUl)) {
-    $pageLocation = "login"; // default to login page
+    $pageLocation = "shop"; // default to login page
 }
 else {
     $pageLocation = $pageUl; // Which page user is on through URL get
